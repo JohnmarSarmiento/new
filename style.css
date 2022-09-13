@@ -1,0 +1,284 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Rajdhani', sans-serif;
+   
+}
+nav {
+    width: 100%;
+    height: 85px;
+    background-color: black;
+    line-height: 75px;
+    padding: 0px 80px;
+}
+nav .logo {
+    float: left;
+    
+}
+nav .logo h2 {
+    font-size: 50px;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+}
+.a {
+    color: white;
+}
+.b {
+    color: transparent;
+    -webkit-text-stroke: 1px gray;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate {
+    0% , 100% {
+        color: gray;
+        clip-path: polygon(0% 43%, 12% 41%, 30% 44%, 45% 52%, 56% 63%, 67% 69%, 83% 71%, 100% 63%, 100% 100%, 0 100%, 0 89%);
+    }
+    50% {
+        color: gray;
+        clip-path: polygon(0 63%, 21% 68%, 35% 67%, 51% 56%, 60% 43%, 69% 36%, 83% 31%, 100% 33%, 100% 100%, 0 100%, 0 89%);
+    }
+}
+
+
+nav ul {
+    float: right;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 0px 20px;
+}
+
+nav ul li a:hover {
+    color: black;
+}
+nav ul .active {
+    color: black;
+    font-weight: bolder;
+}
+.checkbtn {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+#check {
+    display: none;
+}
+@media screen and (max-width: 640px) {
+    nav {
+        padding: 0px 50px;
+    }
+    .checkbtn {
+        display: block;
+    }
+    nav .logo h2 {
+        font-size: 40px;
+    }
+    nav ul {
+        width: 100%;
+        height: 100vh;
+        background-image: url('/');
+        background-color: gray;
+        position: fixed;
+        top: 85px;
+        left: -100%;
+        text-align: center;
+        transition: .5s ease;
+    }
+    nav ul li {
+        display: block; 
+        margin: 60px 0px;
+        line-height: 20px;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+}
+
+body {
+    background-image:url('/');
+    background-color:;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+.contain {
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container {
+    margin-left: 65px;
+    margin-top: 400%;
+}
+.back1, .back2 {
+    position: absolute;
+    border: 1px solid gray;
+    font-size: 150px;
+    padding: 55px;
+    border-radius: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 4px 2px;
+    font-family: 'Permanent Marker', cursive;
+}
+.back1 {
+    color: transparent;
+    -webkit-text-stroke: 1px silver;
+}
+.back2 {
+   
+    animation: animated 5s linear infinite;
+    color: transparent;
+}
+@keyframes animated {
+    0% , 100% {
+        color: gray;
+        clip-path: polygon(0% 43%, 12% 41%, 30% 44%, 45% 52%, 56% 63%, 67% 69%, 83% 71%, 100% 63%, 100% 100%, 0 100%, 0 89%);
+    }
+    50% {
+        color: gray;
+        clip-path: polygon(0 63%, 21% 68%, 35% 67%, 51% 56%, 60% 43%, 69% 36%, 83% 31%, 100% 33%, 100% 100%, 0 100%, 0 89%);
+    }
+}
+@media screen and (max-width: 640px) {
+    .container {
+      margin-top: 250%;
+      
+}
+    .back1, .back2 {
+      position: absolute;
+      border: 1px solid gray;
+      font-size: 70px;
+      font-family: 'Permanent Marker', cursive;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 4px 2px;
+}
+}
+
+.btn_contain {
+    text-align: center;
+    justify-content:center;
+    align-items: center;
+}
+.btn_1 {
+    margin-top: 45%;
+}
+.btn_1 a button {
+    padding: 18px 38px;
+    font-size: 42px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid silver;
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+@media screen and (max-width: 640px) {
+.btn_contain {
+    text-align: center;
+    justify-content:center;
+    align-items: center;
+    
+}
+.btn_1 {
+    margin-top: 40%;
+}
+.btn_1 a button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid silver;
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+}
+.social_container {
+    justify-content: center;
+    text-align: center;
+    margin-top: 150px;
+    box-sizing: border-box;
+}
+.para_container {
+     width: 800px;
+     padding: 15px ;
+     margin-left: 90px;
+     
+}
+.para_container p {
+     font-size: 30px;
+     border: none;
+     border-bottom: 2px solid silver;
+     padding-bottom: 30px;
+}
+.social_logo {
+     cursor: pointer;
+     display: inline-block;
+     padding-left: 15px;
+  
+}
+.social_logo a {
+     color: black;
+     cursor: pointer;
+     
+}
+.social_logo i {
+     font-size: 60px;
+     padding: 3px 18px;
+     
+     
+}
+@media screen and (max-width: 640px) {
+    .social_container {
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+    box-sizing: border-box;
+}
+.para_container {
+    width: 450px;
+    padding: 10px;
+    margin-left: 40px;
+}
+.para_container p {
+    font-size: 15px;
+    color: gray;
+    border-bottom: 2px solid silver;
+    padding-bottom: 15px;
+}
+.social_logo {
+    display: inline-block;
+    line-height: 10px;
+}
+.social_logo a {
+    color: black;
+    outline: none;
+}
+.social_logo i {
+    font-size: 28px;
+    padding: 0 18px;
+}
+}
